@@ -29,7 +29,10 @@ def display(x, y):
 			print('Local max')
 	elif d_result == 0:
 		print('Inconclusive')
-	print('') # new line
+
+def evaluate(f, x, y):
+	'''Returns f(x, y)'''
+	return f(x, y)
 
 x1 = 0.170
 x2 = 1.131
@@ -43,9 +46,5 @@ y_list = [y1, y2]
 for x in x_list:
 	for y in y_list:
 		display(x, y)
-
-
-'''display(0.170, 0.549)
-display(0.170, -1.215)
-display(1.131, 0.549)
-display(1.131, -1.215)'''
+		print('f = ' + str(evaluate(func, x, y)))
+		print('') # new line
